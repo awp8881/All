@@ -7,6 +7,8 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/webSocket/pom.xml" />
         <option value="$PROJECT_DIR$/webSocketDemo/pom.xml" />
+        <option value="$PROJECT_DIR$/nettyWebSocket/pom.xml" />
+        <option value="$PROJECT_DIR$/es/pom.xml" />
       </list>
     </option>
   </component>

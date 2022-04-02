@@ -7,11 +7,15 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="webSocketDemo" />
+        <module name="nettyWebSocket" />
+        <module name="es" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="es" options="-parameters" />
+      <module name="nettyWebSocket" options="-parameters" />
       <module name="webSocketDemo" options="-parameters" />
     </option>
   </component>
