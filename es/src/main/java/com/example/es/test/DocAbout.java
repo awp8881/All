@@ -186,12 +186,12 @@ public class DocAbout {
 
 
         SearchRequest ybzRequest = new SearchRequest();
-        ybzRequest.indices("ybz");
+        ybzRequest.indices("fuck_*");
         //全量查询
-        //SearchSourceBuilder builder = new SearchSourceBuilder().query(QueryBuilders.matchAllQuery());
+//        SearchSourceBuilder builder = new SearchSourceBuilder().query(QueryBuilders.matchAllQuery());
 
         //单条件查询
-        //SearchSourceBuilder builder = new SearchSourceBuilder().query(QueryBuilders.termQuery("age",5));
+        SearchSourceBuilder builder = new SearchSourceBuilder().query(QueryBuilders.termQuery("message","进入creatSomeLogs"));
 
         //分页查询
         //SearchSourceBuilder builder = new SearchSourceBuilder().query(QueryBuilders.matchAllQuery());
@@ -239,9 +239,9 @@ public class DocAbout {
         //AggregationBuilder aggregationBuilder = AggregationBuilders.max("maxAge").field("age"); //最大年龄
         //builder.aggregation(aggregationBuilder);
 
-        SearchSourceBuilder builder = new SearchSourceBuilder();
-        AggregationBuilder aggregationBuilder = AggregationBuilders.terms("ageGroup").field("age"); //根据年龄分组
-        builder.aggregation(aggregationBuilder);
+//        SearchSourceBuilder builder = new SearchSourceBuilder();
+//        AggregationBuilder aggregationBuilder = AggregationBuilders.terms("ageGroup").field("age"); //根据年龄分组
+//        builder.aggregation(aggregationBuilder);
         ybzRequest.source(builder);
         SearchResponse response = edClient.search(ybzRequest, RequestOptions.DEFAULT);
         logger.info("返回："+ response);
