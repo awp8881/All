@@ -1,5 +1,10 @@
 package com.example.es.bean;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Controller;
+
+@Component
 public class User {
 
     private String name;
@@ -13,6 +18,7 @@ public class User {
     }
 
     public void setName(String name) {
+        System.out.println("fuck you");
         this.name = name;
     }
 
@@ -32,3 +38,12 @@ public class User {
         this.sex = sex;
     }
 }
+
+
+
+
+
+
+
+
+
